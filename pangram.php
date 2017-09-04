@@ -6,16 +6,11 @@
 		$letters = str_split("thequickbrownfoxjumpsoverthelazydog");
 
 		foreach ($letters as $letter) {
-			if (strstr($sentences, $letter)) {
-				$status = true;
-			} else {
-				$status = false;
-				break;
-			}
-
+			if (!strstr($sentences, $letter))
+				return false;
 		}
 
-		return $status;
+		return true;
 	}
 
 ?>
